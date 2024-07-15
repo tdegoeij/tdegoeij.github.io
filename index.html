@@ -178,7 +178,8 @@
       body: new URLSearchParams(formData).toString(),
     })
       .then(() => {
-        document.querySelector(".submission-container").style.display = "flex"
+        document.querySelector(".submission-container").style.display = "flex";
+        document.querySelector(".contact-container").style.display = "none";
       })
       .catch((error) => alert(error));
   };
