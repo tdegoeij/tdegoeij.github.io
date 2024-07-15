@@ -139,7 +139,9 @@
         <textarea placeholder="Jouw vraag" name="inquiry" class="area" rows="4"></textarea>
         <button class="button">Verstuur <i class="fa-regular fa-paper-plane"></i></button>
       </form>
-
+    </div>
+    <div class="submission-container">
+      <h2>Bedankt voor je bericht, we nemen zo snel mogelijk contact met je op</h2>
     </div>
   </div>
   <footer>
@@ -175,7 +177,9 @@
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => alert("Thank you for your submission"))
+      .then(() => {
+        document.querySelector(".submission-container").style.display = "flex"
+      })
       .catch((error) => alert(error));
   };
 

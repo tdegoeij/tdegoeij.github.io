@@ -255,6 +255,10 @@ h2 {
   color: white;
  }
 
+ .submission-container {
+  display: none;
+ }
+
 .visible {
   display: flex;
 }
