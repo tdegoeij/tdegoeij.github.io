@@ -133,7 +133,7 @@
       <h2>We horen graag van je</h2>
       <p>Stel hier je vraag en wij komen zo snel mogelijk bij je terug</p>
       <img src="/static/contact.png" alt="contact vector" class="contact">
-      <form class="contact-form" method="POST">
+      <form class="contact-form" method="POST" netlify>
         <input type="text" placeholder="Naam" name="name" class="row">
         <input type="email" placeholder="Email" name="email" class="row">
         <textarea placeholder="Jouw vraag" name="inquiry" class="area" rows="4"></textarea>
@@ -166,23 +166,6 @@
       });
     });
   });
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => {
-        document.querySelector(".submission-container").style.display = "flex";
-        document.querySelector(".contact-container").style.display = "none";
-      })
-      .catch((error) => alert(error));
-  };
 
   document
     .querySelector("form")
