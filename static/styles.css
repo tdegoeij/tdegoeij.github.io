@@ -327,6 +327,11 @@ h2 {
   display: none;
 }
 
+.submission-container h2 {
+  max-width: 70%;
+  text-align: center;
+}
+
 .contact-container h2{
   max-width: 70%;
   text-align: center;
