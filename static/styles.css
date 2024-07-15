@@ -320,8 +320,8 @@ h2 {
 }
 
 .submission-container {
-  width: 700px;
-  height: 700px;
+  width: 70%;
+  height: 70%;
   display: flex;
   justify-content: center;
   display: none;
