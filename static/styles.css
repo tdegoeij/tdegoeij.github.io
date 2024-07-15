@@ -309,7 +309,7 @@ h2 {
   padding: 10px;
 }
 
-.contact-container, .submission-container{
+.contact-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -320,10 +320,14 @@ h2 {
 }
 
 .submission-container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
   display: none;
 }
 
-.contact-container h2 {
+.contact-container h2{
   max-width: 70%;
   text-align: center;
 }
