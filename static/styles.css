@@ -267,9 +267,6 @@ h2 {
   align-items: flex-end;
 }
 
-.author-wrapper {
-  margin-top: -200px;
-}
 
 .author {
   color: #FFA800;
@@ -285,7 +282,10 @@ h2 {
 .quotes-wrapper {
   margin: 0 auto;
   display: flex;
-  padding-right: 100px;
+  flex-direction: column;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
+  padding: 30px 20px;
+  border-radius: 15px;
 }
 
 .link {
@@ -299,14 +299,20 @@ h2 {
 .quotations {
   font-size: 20em;
   font-family: "Catamaran", sans-serif;
-  margin-top: -150px;
+  margin-top: -180px;
   margin-right: -40px;
   color: #EAFCFF;
   font-weight: 800;
+  position: absolute;
+  left: 10%;
+}
+
+.author-wrapper {
+  align-self: flex-end;
 }
 
 .quote {
-  padding: 10px;
+  z-index: 10;
 }
 
 .contact-container {
@@ -450,7 +456,7 @@ footer p {
 
   .header-container {
     position: static;
-    height: 70vh;
+    height: 80vh;
   }
 
   .header-image-wrapper {
@@ -473,7 +479,7 @@ footer p {
   }
 
   .marketing-image {
-    width: 80%;
+    width: 70%;
   }
   .text-2 {
     width: 100%;
@@ -509,17 +515,14 @@ footer p {
 
   .quotes-wrapper{
     flex-direction: column;
-    padding-right: 0px;
+    padding: 10px;
   }
   .quotations {
     max-width: 300px;
+    left: 0;
   }
 
-  .quote {
-    margin-top: -350px;
-    padding-left: 20px;
 
-  }
 
   .author-wrapper {
     margin-top: 10px;
