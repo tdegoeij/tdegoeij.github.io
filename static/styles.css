@@ -103,7 +103,6 @@ h2 {
 
 .header-image-wrapper {
   padding: 100px;
-  margin-top: -100px;
   width: 50%;
 }
 
@@ -123,11 +122,11 @@ h2 {
 .marketing-image-wrapper {
   width: 50%;
   display: flex;
-
+  justify-content: center;
 }
 
 .marketing-image {
-  max-width: 550px;
+  max-width: 500px;
 }
 
 .text-2 {
@@ -283,7 +282,6 @@ h2 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
   padding: 30px 20px;
   border-radius: 15px;
 }
@@ -407,11 +405,12 @@ footer p {
   .header-title {
     width: 100%;
     padding: 50px 10px;
+    order: -1;
 
   }
 
   .header {
-    display: none;
+    max-width: 90%;
   }
 
   .logo {
@@ -446,7 +445,7 @@ footer p {
     width: 100%;
     padding: 10px;
     justify-content: stretch;
-    padding-top: 120px;
+    padding-top: 70px;
     height: 100%;
   }
 
@@ -456,7 +455,6 @@ footer p {
 
   .header-container {
     position: static;
-    height: 80vh;
   }
 
   .header-image-wrapper {
@@ -517,6 +515,7 @@ footer p {
     flex-direction: column;
     padding: 20px;
   }
+
   .quotations {
     max-width: 300px;
     left: 0;
@@ -531,11 +530,12 @@ footer p {
   .contact-container{
     width: 100%;
     padding: 50px 10px;
-    background: radial-gradient(ellipse at top, #EAFCFF80, #EAFCFF00 60%)
+    background: none;
   }
 
   .contact-container h2{
     max-width: 100%;
+    text-align: left;
   }
 
   .contact {
