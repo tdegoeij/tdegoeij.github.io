@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/"
+  to = "https://www.gobe-digital.com/nl"
+  status = 301
+  force = true
