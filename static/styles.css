@@ -350,6 +350,13 @@ h2 {
   width: 100%;
 }
 
+.form-label, .form-check-label {
+  color: #001e5b;
+  font-family: "Quicksan", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
 .contact{
   max-width: 100px;
   position: absolute;
@@ -382,6 +389,7 @@ h2 {
   background-color: #002C83;
   color: white;
   font-size: 20px;
+  border: solid 1px #002C83;
 }
 
 .button:hover{
@@ -410,13 +418,14 @@ footer p {
   }
 
   .header {
-    max-width: 90%;
+    display: none;
   }
 
   .logo {
     position: static;
     margin-bottom: 30px;
     max-width: 200px;
+    padding: 100px 0px 50px 0px;
   }
 
  .zero, .one, .two, .three {
@@ -434,6 +443,10 @@ footer p {
 
   .first {
     text-align: start;
+  }
+
+  .first img {
+    width: 40%;
   }
 
   .steps-wrapper {
