@@ -16,22 +16,22 @@
 }
 
 h1, h2, h3, h4 {
-  font-family: "Poppins", sans-serif;
-  color: #ffaa00;
-  line-height: 1.2em;
-  margin-bottom: 5px;
+  font-family: "Poppins", sans-serif!important;
+  color: #ffaa00!important;
+  line-height: 1.2em!important;
+  margin-bottom: 5px!important;
   font-weight: 600!important;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 28px!important;
 }
 
 p {
-  font-family: "Quicksand", sans-serif;
-  color: #001e5b;
-  font-size: 18px;
-  line-height: 1.4em;
+  font-family: "Quicksand", sans-serif!important;
+  color: #001e5b!important;
+  font-size: 18px!important;
+  line-height: 1.4em!important;
 }
 
 .title {
@@ -202,6 +202,9 @@ h2 {
   width: 50%;
 }
 
+.recap {
+  margin-bottom: 5px;
+}
 
 .right {
   text-align: right;
