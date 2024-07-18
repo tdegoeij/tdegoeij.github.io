@@ -264,7 +264,8 @@ h2 {
 }
 
 .quotes-section {
-  padding: 0 15% 250px 15%;
+  margin-top: -100px;
+  padding: 0 15% 100px 15%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -326,7 +327,6 @@ h2 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 50%;
   padding: 150px;
 }
 
@@ -338,15 +338,7 @@ h2 {
   display: none;
 }
 
-.submission-container h2 {
-  max-width: 70%;
-  text-align: center;
-}
 
-.contact-container h2{
-  max-width: 70%;
-  text-align: center;
-}
 
 .contact-form{
   display: flex;
