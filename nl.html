@@ -135,10 +135,10 @@
     <div class="contact-container">
       <h2>We horen graag van je</h2>
       <p>Neem geheel vrijblijvend contact met ons op</p>
-      <form method="post" netlify data-netlify-recaptcha="true" name="contact">
+      <form method="post" netlify data-netlify-recaptcha="true" name="contact" class="needs-validation" novalidate>
         <div class="mb-3">
           <label for="naam" class="form-label">Naam</label>
-          <input type="text" class="form-control" id="naam" name="naam" reuired>
+          <input type="text" class="form-control" id="naam" name="naam" required>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
@@ -203,6 +203,26 @@
   document
     .querySelector("form")
     .addEventListener("submit", handleSubmit);
+
+  (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
 </script>
 
 </html>
