@@ -562,6 +562,10 @@ footer p {
     z-index: -1;
   }
 
+  .submission-container{
+    width: 90%;
+  }
+
   footer {
     padding: 10px 5%;
   }
