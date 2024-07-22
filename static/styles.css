@@ -561,4 +561,8 @@ footer p {
     max-width: 65px;
     z-index: -1;
   }
+
+  footer {
+    padding: 10px 5%;
+  }
 }
