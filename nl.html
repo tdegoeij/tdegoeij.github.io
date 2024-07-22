@@ -165,23 +165,23 @@
   </footer>
 </body>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let values = document.querySelectorAll(".value");
-    let details = document.querySelectorAll(".detail");
+document.addEventListener("DOMContentLoaded", function () {
+  let values = document.querySelectorAll(".value");
+  let details = document.querySelectorAll(".detail");
 
-    values.forEach((value, index) => {
-      value.addEventListener("mouseover", function () {
-        values.forEach((other_value, i) => { // Change the second index variable to i
-          if (other_value !== value) {
-            other_value.classList.remove("hover");
-            details[i].classList.remove("visible");
-          }
-        });
-        value.classList.add("hover");
-        details[index].classList.add("visible");
+  values.forEach((value, index) => {
+    value.addEventListener("mouseover", function () {
+      values.forEach((other_value, i) => { // Change the second index variable to i
+        if (other_value !== value) {
+          other_value.classList.remove("hover");
+          details[i].classList.remove("visible");
+        }
       });
+      value.classList.add("hover");
+      details[index].classList.add("visible");
     });
   });
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -200,28 +200,28 @@
       .catch((error) => alert(error));
   };
 
-  document
-    .querySelector("form")
-    .addEventListener("submit", handleSubmit);
-
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
   (() => {
-  'use strict'
+    'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        } else {
+          handleSubmit(event);
+        }
 
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
+        form.classList.add('was-validated');
+      }, false);
+    })
+  })();
+});
 
 </script>
 
