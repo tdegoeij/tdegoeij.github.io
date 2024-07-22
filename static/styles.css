@@ -32,6 +32,7 @@ p {
   color: #001e5b;
   font-size: 18px;
   line-height: 1.4em!important;
+  margin-bottom: 0px;
 }
 
 .title {
@@ -330,6 +331,10 @@ h2 {
   padding: 150px;
 }
 
+.contact-container p {
+  margin-bottom: 20px;
+}
+
 .submission-container {
   width: 70%;
   height: 70%;
@@ -519,7 +524,7 @@ footer p {
   }
 
   .quotes-section {
-    padding: 70px 10px;
+    padding: 160px 10px 70px 10px;
   }
 
   .quotes-wrapper{
@@ -548,6 +553,8 @@ footer p {
     max-width: 100%;
     text-align: left;
   }
+
+
 
   .contact {
     left: 75%;
