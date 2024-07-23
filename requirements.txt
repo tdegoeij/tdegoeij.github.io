@@ -1,6 +1,5 @@
-flask
-flask_session
-requests
-bs4
-unidecode
-urllib
+flask==2.0.3
+flask_session==0.3.2
+requests==2.26.0
+beautifulsoup4==4.10.0
+unidecode==1.3.2
