@@ -1,6 +1,5 @@
 flask
 flask_session
-re
 requests
 bs4
 unidecode
