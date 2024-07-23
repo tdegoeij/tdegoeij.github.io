@@ -60,7 +60,7 @@ h2 {
   height: 100%;
   width: 100%;
   display: flex;
-  background: linear-gradient(0deg, #EAFCFF, #EAFCFF00 50%);
+  background: linear-gradient(0deg, #EAFCFF80, #EAFCFF00 50%);
   padding: 30px 15%;
   justify-content: center;
   align-items: center;
@@ -104,12 +104,12 @@ h2 {
 }
 
 .header-image-wrapper {
-  padding: 100px;
+  padding: 50px;
   width: 50%;
 }
 
 .header {
-  max-width: 500px;
+  max-width: 100%;
 }
 
 .section-marketing {
@@ -119,6 +119,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  background: linear-gradient(180deg, #EAFCFF80 , #FFA80000)
 }
 
 .marketing-image-wrapper {
@@ -134,12 +135,23 @@ h2 {
 .text-2 {
   width: 50%;
   padding: 50px;
+  background-color: white;
+  border-radius: 15px;
+  margin-top: -50px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, #EAFCFF 0px 0px 0px 1px;
 }
 
 .text-2 h2 {
-  margin-top: -50px;
   line-height: 1.2em;
 }
+
+.gradient {
+  background-image: url(/static/elipse.svg);
+  background-size: 42%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 
 
 .logos-container {
@@ -163,23 +175,32 @@ h2 {
 .steps-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
+  background-color: #ffF;
+  max-width: 550px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, #EAFCFF 0px 0px 0px 1px;
+}
+
+.text-2:hover, .steps-wrapper:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .steps-text {
-  max-width: 350px;
+  max-width: 400px;
+  padding: 20px 10px;
 }
 
 .zero {
   position: absolute;
   left: 500px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .one {
   position: absolute;
   left: 200px;
-  margin-top: 300px;
+  margin-top: 350px;
 }
 
 
@@ -191,8 +212,8 @@ h2 {
 
 .three {
   position: absolute;
-  left: 400px;
-  margin-top: 550px;
+  left: 500px;
+  margin-top: 600px;
 }
 
 .steps-img {
@@ -200,7 +221,7 @@ h2 {
 }
 
 .steps-img img {
-  width: 50%;
+  width: 100%;
 }
 
 .recap {
@@ -213,7 +234,6 @@ h2 {
 
 .first {
   order: -1;
-  padding-left: 0px;
   text-align: end;
 }
 
@@ -270,6 +290,8 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  background: linear-gradient(0deg, #EAFCFF80 25%, #EAFCFF00)
+
 }
 
 
@@ -320,7 +342,7 @@ h2 {
 }
 
 .contact-background {
-  background: linear-gradient(0deg, #EAFCFF, #EAFCFF50);
+  background: linear-gradient(0deg, #EAFCFF50, #EAFCFF80);
 }
 
 .contact-container {
@@ -419,19 +441,24 @@ footer p {
   .header-title {
     width: 100%;
     padding: 30px 10px;
-    order: -1;
 
   }
 
   .header {
-    display: none;
+    display: flex;
+  }
+
+
+  .header-container {
+    height: auto;
   }
 
   .logo {
-    position: static;
+    position: absolute;
     margin-bottom: 30px;
     max-width: 200px;
-    padding: 100px 0px 50px 0px;
+    top: 5%;
+    left: 5%;
   }
 
  .zero, .one, .two, .three {
@@ -447,6 +474,14 @@ footer p {
     order: -1;
   }
 
+  .steps-img img{
+    width: 50%;
+  }
+
+  .gradient {
+    background-image: none;
+  }
+
   .first {
     text-align: start;
   }
@@ -457,8 +492,12 @@ footer p {
 
   .steps-wrapper {
     flex-direction: column;
+    max-width: 100%;
   }
 
+  .steps-text {
+    max-width: 90%;
+  }
   .header-background {
     flex-direction: column;
     width: 100%;
@@ -478,7 +517,7 @@ footer p {
   .header-image-wrapper {
     width: 100%;
     order: -1;
-    padding: 0px;
+    padding-top: 150px;
   }
 
 
@@ -498,10 +537,11 @@ footer p {
     width: 70%;
   }
   .text-2 {
-    width: 100%;
+    width: 90%;
     padding: 30px 10px;
-    max-width: none;
+    max-width: 90%;
     text-align: center;
+    margin-top: 0;
   }
 
   .values-container {
@@ -510,7 +550,7 @@ footer p {
     padding: 20px ;
   }
   .section {
-    padding: 50px 10px;
+    padding: 50px 5%;
     height: auto;
     width: 100%;
   }

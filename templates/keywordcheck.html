@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %} GoBe Digital | Check gratis of je content geoptimaliseerd is {% endblock %}
+
+{% block body %}
+<form method="get">
+    <input name="url">
+    <input name="keyword">
+    <button type="submit">Check</button>
+</form>
+{% if data %}
+    {% if data.error %}
+    <p> {{ data.error }} </p>
+    {% else %} 
+        {% if data.url %}
+        <p class="true">Keyword gevonden in de url</p>
+        {% else %}
+        <p class="false">Voeg het keyword toe aan je url</p>
+        {% endif %}
+        {% if data.title %}
+        <p class="true">Keyword gevonden in de titel</p>
+        {% else %}
+        <p class="false">Voeg het keyword toe aan je titel</p>
+        {% endif %}
+        {% if data.header %}
+        <p class="true">Keyword gevonden in de h1</p>
+        {% else %}
+        <p class="false">Voeg het keyword toe aan je h1</p>
+        {% endif %}
+        <p> Zo vaak komt je keyword voor: {{data.count}} keer</p>
+    {% endif %}
+{% endif %}
+{% endblock %}
