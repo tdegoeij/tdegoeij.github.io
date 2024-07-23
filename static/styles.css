@@ -542,6 +542,10 @@ footer p {
     margin-top: 0;
   }
 
+  .text-2, .steps-wrapper {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+
   .values-container {
     width: 100%;
     flex-direction: column;
