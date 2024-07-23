@@ -5,28 +5,32 @@ from urllib.parse import urlparse
 from urllib.robotparser import RobotFileParser
 
 def robot_block(url):
-    # Parse the URL to get the base URL
-    parsed_url = urlparse(url)
-    base_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
+    try:
+        # Parse the URL to get the base URL
+        parsed_url = urlparse(url)
+        base_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
     
     # Check the robots.txt file
-    try:
+    
         robots_url = f"{base_url}/robots.txt"
         rp = RobotFileParser()
         rp.set_url(robots_url)
         rp.read()
         if not rp.can_fetch("*", url):
             return True
-    except ValueError:
+    except:
         pass
     return False
 
 def response_code(url):
     # Check the HTTP response code
-    response = requests.get(url)
-    if response.status_code != 200:
-        print(f"Invalid response code {response.status_code} for URL: {url}")
-        return True
+    try:
+        response = requests.get(url, verify=False)
+        if response.status_code != 200:
+            print(f"Invalid response code {response.status_code} for URL: {url}")
+            return True
+    except:
+        pass
     return False
 
 
@@ -43,7 +47,7 @@ def checkContent (keyword, url):
         kw_in_url = True
     else:
         kw_in_url = False
-    soup = BeautifulSoup(requests.get(url).content, 'html.parser', from_encoding="iso-8859-8")
+    soup = BeautifulSoup(requests.get(url, verify=False).content, 'html.parser', from_encoding="iso-8859-8")
     title = soup.title.text.lower()
     title = title.replace('.','')
     title = title.replace('-', ' ')
